@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Notes 🐱</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <!-- Paw decorations -->
+    <div class="paw paw1">🐾</div>
+    <div class="paw paw2">🐾</div>
+    <div class="paw paw3">🐾</div>
+    <div class="paw paw4">🐾</div>
+
+
+    <main class="container">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+           <div class="cat cat-left">
+    <img src="{{ url_for('static', filename='cat1.png') }}" alt="Cat">
+</div>
+
+            <div class="title-area">
+
+                <h1>
+                     My Notes
+                </h1>
+
+                <p>
+                    Write it down. Remember it forever. 🐾
+                </p>
+
+            </div>
+
+            <div class="cat cat-right">
+    <img src="{{ url_for('static', filename='cat2.png') }}" alt="Cat">
+</div>
+
+        </header>
+
+
+        <!-- NEW NOTE -->
+
+        <section class="new-note">
+
+            <h2>
+                ✏️ Write a new note
+            </h2>
+
+            <div class="textarea-wrapper">
+
+    <textarea
+        id="noteInput"
+        placeholder="Write your note here..."
+    ></textarea>
+
+    <img
+        src="{{ url_for('static', filename='cat3.webp') }}"
+        alt="Cat"
+        class="note-cat-image"
+    >
+
+</div>
+
+            <div class="note-bottom">
+
+                <button onclick="saveNote()">
+                    🐾 Save Note
+                </button>
+
+                <span class="kitty">
+                    
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- SAVED NOTES -->
+
+        <section class="saved-section">
+
+            <div class="saved-header">
+
+                <h2>
+                    📒 Saved Notes
+                </h2>
+
+                <div class="search-box">
+
+                    🔍
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search notes..."
+                        oninput="searchNotes()"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div id="notes"></div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            🧶 Made with
+            <span>💗</span>
+            and lots of purrs 🐾
+
+        </footer>
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
